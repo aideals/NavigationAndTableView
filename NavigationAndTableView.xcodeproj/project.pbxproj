@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D279EF41CFEF9B400CFB0D5 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D279EF31CFEF9B400CFB0D5 /* TableViewController.m */; };
 		1D36A8691CFDC4F7004587ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36A8681CFDC4F7004587ED /* main.m */; };
 		1D36A86C1CFDC4F7004587ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36A86B1CFDC4F7004587ED /* AppDelegate.m */; };
 		1D36A86F1CFDC4F7004587ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36A86E1CFDC4F7004587ED /* ViewController.m */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D279EF21CFEF9B400CFB0D5 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		1D279EF31CFEF9B400CFB0D5 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		1D36A8641CFDC4F7004587ED /* NavigationAndTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationAndTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D36A8681CFDC4F7004587ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1D36A86A1CFDC4F7004587ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 				1D36A86B1CFDC4F7004587ED /* AppDelegate.m */,
 				1D36A86D1CFDC4F7004587ED /* ViewController.h */,
 				1D36A86E1CFDC4F7004587ED /* ViewController.m */,
+				1D279EF21CFEF9B400CFB0D5 /* TableViewController.h */,
+				1D279EF31CFEF9B400CFB0D5 /* TableViewController.m */,
 				1D36A8731CFDC4F7004587ED /* Assets.xcassets */,
 				1D36A8751CFDC4F7004587ED /* LaunchScreen.storyboard */,
 				1D36A8781CFDC4F7004587ED /* Info.plist */,
@@ -272,6 +277,7 @@
 				1D36A86F1CFDC4F7004587ED /* ViewController.m in Sources */,
 				1D36A86C1CFDC4F7004587ED /* AppDelegate.m in Sources */,
 				1D36A8691CFDC4F7004587ED /* main.m in Sources */,
+				1D279EF41CFEF9B400CFB0D5 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +493,7 @@
 				1D36A8931CFDC4F7004587ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D36A8941CFDC4F7004587ED /* Build configuration list for PBXNativeTarget "NavigationAndTableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +502,7 @@
 				1D36A8961CFDC4F7004587ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D36A8971CFDC4F7004587ED /* Build configuration list for PBXNativeTarget "NavigationAndTableViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +511,7 @@
 				1D36A8991CFDC4F7004587ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
