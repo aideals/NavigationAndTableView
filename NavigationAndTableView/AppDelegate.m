@@ -23,7 +23,7 @@
     TableViewController *tvc = [[TableViewController alloc] initWithStyle:UITableViewStylePlain];
     
     ViewController *vc = [[ViewController alloc] init];
-    vc.title = @"Root View";
+    vc.navigationItem.title = @"Root View";
     
     self.nav = [[UINavigationController alloc] init];
     [self.nav pushViewController:vc animated:YES];
