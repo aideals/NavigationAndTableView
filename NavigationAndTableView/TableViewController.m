@@ -56,6 +56,53 @@
 {
     NSInteger row = [indexPath row];
     
+    switch (row) {
+        case 0:
+            self.avc = [[AppleViewController alloc] initWithNibName:nil bundle:nil];
+            [self.navigationController pushViewController:_avc animated:YES];
+            self.avc.title = @"Apple";
+            break;
+            
+        case 1:
+            self.tvc = [[TeaViewController alloc] initWithNibName:nil bundle:nil];
+            [self.navigationController pushViewController:_tvc animated:YES];
+            self.tvc.title = @"Tea";
+            break;
+            
+        case 2:
+            self.pvc = [[PlayViewController alloc] initWithNibName:nil bundle:nil];
+            [self.navigationController pushViewController:_pvc animated:YES];
+            self.pvc.title = @"Play";
+            break;
+            
+        case 3:
+            self.bvc = [[BasketballViewController alloc] initWithNibName:nil bundle:nil];
+            [self.navigationController pushViewController:_bvc animated:YES];
+            self.bvc.title = @"Basketball";
+            break;
+            
+        case 4:
+            self.dvc = [[DogViewController alloc] initWithNibName:nil bundle:nil];
+            [self.navigationController pushViewController:_dvc animated:YES];
+            self.dvc.title = @"Dog";
+            break;
+            
+        case 5:
+            self.cvc = [[CatViewController alloc] initWithNibName:nil bundle:nil];
+            [self.navigationController pushViewController:_cvc animated:YES];
+            self.cvc.title = @"Cat";
+            break;
+            
+        case 6:
+            self.ivc = [[IphoneViewController alloc] initWithNibName:nil bundle:nil];
+            [self.navigationController pushViewController:_ivc animated:YES];
+            self.ivc.title = @"Iphone";
+            break;
+        
+        default:
+            break;
+    }
+    
     
 }
 

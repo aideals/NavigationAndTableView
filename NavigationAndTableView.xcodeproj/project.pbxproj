@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1D279EF41CFEF9B400CFB0D5 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D279EF31CFEF9B400CFB0D5 /* TableViewController.m */; };
+		1D35A43B1D09699E001F12F5 /* AppleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D35A43A1D09699E001F12F5 /* AppleViewController.m */; };
+		1D35A43E1D096B56001F12F5 /* TeaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D35A43D1D096B56001F12F5 /* TeaViewController.m */; };
+		1D35A4411D096C0B001F12F5 /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D35A4401D096C0B001F12F5 /* PlayViewController.m */; };
+		1D35A4441D096CC0001F12F5 /* BasketballViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D35A4431D096CC0001F12F5 /* BasketballViewController.m */; };
+		1D35A4471D096E4D001F12F5 /* DogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D35A4461D096E4D001F12F5 /* DogViewController.m */; };
+		1D35A44A1D096EFF001F12F5 /* CatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D35A4491D096EFF001F12F5 /* CatViewController.m */; };
+		1D35A44D1D096F75001F12F5 /* IphoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D35A44C1D096F75001F12F5 /* IphoneViewController.m */; };
 		1D36A8691CFDC4F7004587ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36A8681CFDC4F7004587ED /* main.m */; };
 		1D36A86C1CFDC4F7004587ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36A86B1CFDC4F7004587ED /* AppDelegate.m */; };
 		1D36A86F1CFDC4F7004587ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36A86E1CFDC4F7004587ED /* ViewController.m */; };
@@ -37,6 +44,20 @@
 /* Begin PBXFileReference section */
 		1D279EF21CFEF9B400CFB0D5 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		1D279EF31CFEF9B400CFB0D5 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		1D35A4391D09699E001F12F5 /* AppleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleViewController.h; sourceTree = "<group>"; };
+		1D35A43A1D09699E001F12F5 /* AppleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleViewController.m; sourceTree = "<group>"; };
+		1D35A43C1D096B56001F12F5 /* TeaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeaViewController.h; sourceTree = "<group>"; };
+		1D35A43D1D096B56001F12F5 /* TeaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeaViewController.m; sourceTree = "<group>"; };
+		1D35A43F1D096C0B001F12F5 /* PlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayViewController.h; sourceTree = "<group>"; };
+		1D35A4401D096C0B001F12F5 /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayViewController.m; sourceTree = "<group>"; };
+		1D35A4421D096CC0001F12F5 /* BasketballViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasketballViewController.h; sourceTree = "<group>"; };
+		1D35A4431D096CC0001F12F5 /* BasketballViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasketballViewController.m; sourceTree = "<group>"; };
+		1D35A4451D096E4D001F12F5 /* DogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DogViewController.h; sourceTree = "<group>"; };
+		1D35A4461D096E4D001F12F5 /* DogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DogViewController.m; sourceTree = "<group>"; };
+		1D35A4481D096EFF001F12F5 /* CatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatViewController.h; sourceTree = "<group>"; };
+		1D35A4491D096EFF001F12F5 /* CatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatViewController.m; sourceTree = "<group>"; };
+		1D35A44B1D096F75001F12F5 /* IphoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IphoneViewController.h; sourceTree = "<group>"; };
+		1D35A44C1D096F75001F12F5 /* IphoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IphoneViewController.m; sourceTree = "<group>"; };
 		1D36A8641CFDC4F7004587ED /* NavigationAndTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationAndTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D36A8681CFDC4F7004587ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1D36A86A1CFDC4F7004587ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -108,6 +129,20 @@
 				1D36A86E1CFDC4F7004587ED /* ViewController.m */,
 				1D279EF21CFEF9B400CFB0D5 /* TableViewController.h */,
 				1D279EF31CFEF9B400CFB0D5 /* TableViewController.m */,
+				1D35A44B1D096F75001F12F5 /* IphoneViewController.h */,
+				1D35A44C1D096F75001F12F5 /* IphoneViewController.m */,
+				1D35A4481D096EFF001F12F5 /* CatViewController.h */,
+				1D35A4491D096EFF001F12F5 /* CatViewController.m */,
+				1D35A4451D096E4D001F12F5 /* DogViewController.h */,
+				1D35A4461D096E4D001F12F5 /* DogViewController.m */,
+				1D35A4421D096CC0001F12F5 /* BasketballViewController.h */,
+				1D35A4431D096CC0001F12F5 /* BasketballViewController.m */,
+				1D35A43F1D096C0B001F12F5 /* PlayViewController.h */,
+				1D35A4401D096C0B001F12F5 /* PlayViewController.m */,
+				1D35A43C1D096B56001F12F5 /* TeaViewController.h */,
+				1D35A43D1D096B56001F12F5 /* TeaViewController.m */,
+				1D35A4391D09699E001F12F5 /* AppleViewController.h */,
+				1D35A43A1D09699E001F12F5 /* AppleViewController.m */,
 				1D36A8731CFDC4F7004587ED /* Assets.xcassets */,
 				1D36A8751CFDC4F7004587ED /* LaunchScreen.storyboard */,
 				1D36A8781CFDC4F7004587ED /* Info.plist */,
@@ -275,9 +310,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D36A86F1CFDC4F7004587ED /* ViewController.m in Sources */,
+				1D35A4441D096CC0001F12F5 /* BasketballViewController.m in Sources */,
 				1D36A86C1CFDC4F7004587ED /* AppDelegate.m in Sources */,
+				1D35A44A1D096EFF001F12F5 /* CatViewController.m in Sources */,
+				1D35A4471D096E4D001F12F5 /* DogViewController.m in Sources */,
+				1D35A43B1D09699E001F12F5 /* AppleViewController.m in Sources */,
+				1D35A44D1D096F75001F12F5 /* IphoneViewController.m in Sources */,
+				1D35A43E1D096B56001F12F5 /* TeaViewController.m in Sources */,
 				1D36A8691CFDC4F7004587ED /* main.m in Sources */,
 				1D279EF41CFEF9B400CFB0D5 /* TableViewController.m in Sources */,
+				1D35A4411D096C0B001F12F5 /* PlayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
