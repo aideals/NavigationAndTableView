@@ -25,7 +25,7 @@
     [self.view addSubview:self.bt];
 
     [self.navigationController.navigationBar setBackgroundColor:[UIColor blueColor]];
-    self.parentViewController.navigationItem.title = @"First View";
+    
     
     UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(selectLeftAction:)];
     self.navigationItem.leftBarButtonItem = leftButton;
@@ -39,7 +39,10 @@
    
 }
 
-
+- (IBAction)selectRightAction:(id)sender
+{
+    
+}
 
 - (IBAction)GoToNextView:(id)sender
 {

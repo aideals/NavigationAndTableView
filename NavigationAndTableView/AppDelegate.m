@@ -20,16 +20,12 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    TableViewController *tvc = [[TableViewController alloc] initWithStyle:UITableViewStylePlain];
-    
     ViewController *vc = [[ViewController alloc] init];
     vc.navigationItem.title = @"Root View";
     
-    self.nav = [[UINavigationController alloc] init];
-    [self.nav pushViewController:vc animated:YES];
-    
-    
-    self.window.rootViewController = vc;
+    self.nav = [[UINavigationController alloc] initWithRootViewController:vc];
+  
+    self.window.rootViewController = self.nav;
     [self.window makeKeyAndVisible];
     return YES;
 }
