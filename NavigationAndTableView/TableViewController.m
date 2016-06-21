@@ -58,7 +58,7 @@
     
     switch (row) {
         case 0:
-            self.avc = [[AppleViewController alloc] initWithNibName:nil bundle:nil];
+            self.avc = [[AppleViewController alloc] init];
             [self.navigationController pushViewController:_avc animated:YES];
             self.avc.title = @"Apple";
             break;
