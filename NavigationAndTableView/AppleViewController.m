@@ -18,6 +18,7 @@
 @property (nonatomic) NSArray *ary4;
 @property (nonatomic) NSArray *ary5;
 @property (nonatomic) NSArray *ary6;
+@property (nonatomic,strong) UISearchBar *mSearchBar;
 @end
 
 @implementation AppleViewController
@@ -38,6 +39,8 @@
     self.ary5 = [[NSArray alloc] initWithObjects:@"navigation",@"app",@"box",@"play",@"laugh",@"football", nil];
     self.ary6 = [[NSArray alloc] initWithObjects:@"call",@"basketball",@"phone",@"width",@"subview",@"file", nil];
 
+    self.mSearchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 20, tableViewCopy.frame.size.width, 45)];
+    self.mSearchBar.delegate = self;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

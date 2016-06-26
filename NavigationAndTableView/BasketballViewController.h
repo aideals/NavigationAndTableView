@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Candy.h"
 
-@interface BasketballViewController : UIViewController
+@interface BasketballViewController : UIViewController <UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate,UISearchDisplayDelegate>
 
 @end
