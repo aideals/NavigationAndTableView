@@ -69,7 +69,15 @@
     }
 
     Candy *candy = nil;
-    candy = [self.candyArray objectAtIndex:indexPath.row];
+    
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        candy = [self.filteredCandyArray objectAtIndex:indexPath.row];
+    }
+    else {
+        candy = [self.candyArray objectAtIndex:indexPath.row];
+    }
+    
+    
 
     cell.textLabel.text = candy.name;
     
