@@ -11,7 +11,7 @@
 @interface BasketballViewController ()
 @property (nonatomic,copy) NSArray *candyArray;
 @property (nonatomic,strong) UITableView *tableView;
-@property (nonatomic,strong) UISearchBar *candySearchBar;
+@property (nonatomic,strong) UISearchController *candySearchController;
 @property (nonatomic,copy) NSMutableArray *filteredCandyArray;
 @end
 
@@ -32,16 +32,23 @@
                     [Candy candyOfCategory:@"other" name:@"peanut butter cup"],
                     [Candy candyOfCategory:@"other" name:@"gummi bear"],nil];
 
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) style:UITableViewStylePlain];
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     
-    self.candySearchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 45)];
-    self.candySearchBar.delegate = self;
-    self.candySearchBar.placeholder = @"search candy";
+    self.candySearchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    self.candySearchController.delegate = self;
+    self.candySearchController.searchResultsUpdater = self;
+    self.candySearchController.dimsBackgroundDuringPresentation = YES;
+    self.candySearchController.obscuresBackgroundDuringPresentation = NO;
+    self.candySearchController.hidesNavigationBarDuringPresentation = NO;
+    self.candySearchController.searchBar.frame = CGRectMake(self.candySearchController.searchBar.frame.origin.x, self.candySearchController.searchBar.frame.origin.y, self.candySearchController.searchBar.frame.size.width, 44.0);
     
+    self.tableView.tableHeaderView = self.candySearchController.searchBar;
+   
     
-    [self.tableView addSubview:self.candySearchBar];
     [self.view addSubview:self.tableView];
 
     self.filteredCandyArray = [NSMutableArray arrayWithCapacity:[self.candyArray count]];
@@ -70,12 +77,9 @@
 
     Candy *candy = nil;
     
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
-        candy = [self.filteredCandyArray objectAtIndex:indexPath.row];
-    }
-    else {
-        candy = [self.candyArray objectAtIndex:indexPath.row];
-    }
+    
+    candy = [self.candyArray objectAtIndex:indexPath.row];
+   
     
     
 
@@ -85,6 +89,12 @@
 
 }
 
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
+{
+    return YES;
+}
+
+
 - (void)filterContentForSearchText:(NSString *)searchText scope:(NSString *)scope
 {
     [self.filteredCandyArray removeAllObjects];
@@ -92,11 +102,6 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name contains[c] %@",searchText];
     
     self.filteredCandyArray = [NSMutableArray arrayWithArray:[self.candyArray filteredArrayUsingPredicate:predicate]];
-}
-
-- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
-{
-    
 }
 
 

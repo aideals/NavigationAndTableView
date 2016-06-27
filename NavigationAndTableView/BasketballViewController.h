@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Candy.h"
 
-@interface BasketballViewController : UIViewController <UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate,UISearchDisplayDelegate>
+@interface BasketballViewController : UIViewController <UITableViewDelegate,UITableViewDataSource,UISearchControllerDelegate,UISearchResultsUpdating>
 
 @end
