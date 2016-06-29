@@ -32,7 +32,7 @@
                     [Candy candyOfCategory:@"other" name:@"peanut butter cup"],
                     [Candy candyOfCategory:@"other" name:@"gummi bear"],nil];
 
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) style:UITableViewStylePlain];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -63,7 +63,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if (self.candySearchController.active) {
+        return [self.filteredCandyArray count];
+    }
+    else {
     return [self.candyArray count];
+
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -78,32 +84,27 @@
     Candy *candy = nil;
     
     
-    candy = [self.candyArray objectAtIndex:indexPath.row];
-   
+    if (self.candySearchController.active) {
+        candy = [self.filteredCandyArray objectAtIndex:indexPath.row];
+    }
+    else {
+        candy = [self.candyArray objectAtIndex:indexPath.row];
+    }
     
-    
-
     cell.textLabel.text = candy.name;
     
     return cell;
 
 }
 
-- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController
 {
-    return YES;
-}
-
-
-- (void)filterContentForSearchText:(NSString *)searchText scope:(NSString *)scope
-{
-    [self.filteredCandyArray removeAllObjects];
-    
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name contains[c] %@",searchText];
-    
+    NSString *searchString = [self.candySearchController.searchBar text];
+    NSPredicate *predicate  = [NSPredicate predicateWithFormat:@"SELE.name contains[c] %@",searchString];
     self.filteredCandyArray = [NSMutableArray arrayWithArray:[self.candyArray filteredArrayUsingPredicate:predicate]];
+    
+    [self.tableView reloadData];
+    
 }
-
-
 
 @end
