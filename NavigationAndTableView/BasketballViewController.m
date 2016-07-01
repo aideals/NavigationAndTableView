@@ -100,7 +100,7 @@
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController
 {
     NSString *searchString = [self.candySearchController.searchBar text];
-    NSPredicate *predicate  = [NSPredicate predicateWithFormat:@"SELE.name contains[c] %@",searchString];
+    NSPredicate *predicate  = [NSPredicate predicateWithFormat:@"name contains[c] %@",searchString];
     self.filteredCandyArray = [NSMutableArray arrayWithArray:[self.candyArray filteredArrayUsingPredicate:predicate]];
     
     [self.tableView reloadData];
