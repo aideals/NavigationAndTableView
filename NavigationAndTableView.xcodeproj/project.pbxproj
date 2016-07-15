@@ -23,6 +23,8 @@
 		1D36A8771CFDC4F7004587ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D36A8751CFDC4F7004587ED /* LaunchScreen.storyboard */; };
 		1D36A8821CFDC4F7004587ED /* NavigationAndTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36A8811CFDC4F7004587ED /* NavigationAndTableViewTests.m */; };
 		1D36A88D1CFDC4F7004587ED /* NavigationAndTableViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D36A88C1CFDC4F7004587ED /* NavigationAndTableViewUITests.m */; };
+		1D36B2881D2D294800784A92 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D36B2871D2D294800784A92 /* MapKit.framework */; };
+		1D376BF21D322BD90044C771 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D376BF11D322BD90044C771 /* MyAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,9 @@
 		1D36A8881CFDC4F7004587ED /* NavigationAndTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationAndTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D36A88C1CFDC4F7004587ED /* NavigationAndTableViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationAndTableViewUITests.m; sourceTree = "<group>"; };
 		1D36A88E1CFDC4F7004587ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D36B2871D2D294800784A92 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1D376BF01D322BD90044C771 /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
+		1D376BF11D322BD90044C771 /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D36B2881D2D294800784A92 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +112,7 @@
 		1D36A85B1CFDC4F7004587ED = {
 			isa = PBXGroup;
 			children = (
+				1D36B2871D2D294800784A92 /* MapKit.framework */,
 				1D36A8661CFDC4F7004587ED /* NavigationAndTableView */,
 				1D36A8801CFDC4F7004587ED /* NavigationAndTableViewTests */,
 				1D36A88B1CFDC4F7004587ED /* NavigationAndTableViewUITests */,
@@ -144,6 +151,8 @@
 				1D35A4431D096CC0001F12F5 /* BasketballViewController.m */,
 				1D35A43F1D096C0B001F12F5 /* PlayViewController.h */,
 				1D35A4401D096C0B001F12F5 /* PlayViewController.m */,
+				1D376BF01D322BD90044C771 /* MyAnnotation.h */,
+				1D376BF11D322BD90044C771 /* MyAnnotation.m */,
 				1D35A43C1D096B56001F12F5 /* TeaViewController.h */,
 				1D35A43D1D096B56001F12F5 /* TeaViewController.m */,
 				1D35A4391D09699E001F12F5 /* AppleViewController.h */,
@@ -314,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D376BF21D322BD90044C771 /* MyAnnotation.m in Sources */,
 				1D36A86F1CFDC4F7004587ED /* ViewController.m in Sources */,
 				1D35A4441D096CC0001F12F5 /* BasketballViewController.m in Sources */,
 				1D36A86C1CFDC4F7004587ED /* AppDelegate.m in Sources */,
