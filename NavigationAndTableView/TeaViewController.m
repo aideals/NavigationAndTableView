@@ -26,11 +26,17 @@
     self.mapView.scrollEnabled = YES;
     self.mapView.rotateEnabled = YES;
     self.mapView.showsUserLocation = YES;
-    self.mapView.userTrackingMode = MKUserTrackingModeFollowWithHeading;
+    self.mapView.userTrackingMode = MKUserTrackingModeFollow;
     [self.view addSubview:self.mapView];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapMap:)];
     [self.mapView addGestureRecognizer:tap];
+
+    CLLocationManager *location = [[CLLocationManager alloc] init];
+    location.delegate = self;
+    location.desiredAccuracy = kCLLocationAccuracyBest;
+    location.distanceFilter = 1000.0f;
+    [location startUpdatingLocation];
 }
 
 - (IBAction)tapMap:(UITapGestureRecognizer *)tap
@@ -42,7 +48,7 @@
     MyAnnotation *annotation = [[MyAnnotation alloc] init];
     annotation.title = @"我喜欢小芳";
     annotation.subTitle = @"很喜欢";
-    annotation.coordinate = coordinate;
+    annotation.mycoordinate = coordinate;
     [self.mapView addAnnotation:annotation];
     
 }

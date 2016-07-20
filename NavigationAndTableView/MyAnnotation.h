@@ -12,5 +12,5 @@
 @interface MyAnnotation : NSObject <MKAnnotation>
 @property (nonatomic,copy) NSString *title;
 @property (nonatomic,copy) NSString *subTitle;
-@property (nonatomic) CLLocationCoordinate2D *mycoordinate;
+@property (nonatomic) CLLocationCoordinate2D mycoordinate;
 @end

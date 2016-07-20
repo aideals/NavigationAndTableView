@@ -10,6 +10,6 @@
 #import <MapKit/MapKit.h>
 #import "MyAnnotation.h"
 
-@interface TeaViewController : UIViewController <MKMapViewDelegate>
+@interface TeaViewController : UIViewController <MKMapViewDelegate,CLLocationManagerDelegate>
 
 @end
