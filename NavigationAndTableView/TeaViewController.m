@@ -34,9 +34,7 @@
 
     CLLocationManager *location = [[CLLocationManager alloc] init];
     location.delegate = self;
-    location.desiredAccuracy = kCLLocationAccuracyBest;
-    location.distanceFilter = 1000.0f;
-    [location startUpdatingLocation];
+    
 }
 
 - (IBAction)tapMap:(UITapGestureRecognizer *)tap
@@ -51,6 +49,11 @@
     annotation.mycoordinate = coordinate;
     [self.mapView addAnnotation:annotation];
     
+}
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+    [self.mapView setCenterCoordinate:userLocation.coordinate animated:YES];
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
