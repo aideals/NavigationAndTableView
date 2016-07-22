@@ -10,6 +10,7 @@
 
 @interface TeaViewController ()
 @property (nonatomic,strong) MKMapView *mapView;
+@property (nonatomic,strong) MKPointAnnotation *annotation;
 @end
 
 
@@ -35,6 +36,8 @@
     CLLocationManager *location = [[CLLocationManager alloc] init];
     location.delegate = self;
     
+    self.annotation = [[MKPointAnnotation alloc] init];
+
 }
 
 - (IBAction)tapMap:(UITapGestureRecognizer *)tap
@@ -43,11 +46,11 @@
     
     CLLocationCoordinate2D coordinate = [self.mapView convertPoint:point toCoordinateFromView:self.mapView];
     
-    MyAnnotation *annotation = [[MyAnnotation alloc] init];
-    annotation.title = @"我喜欢小芳";
-    annotation.subTitle = @"很喜欢";
-    annotation.mycoordinate = coordinate;
-    [self.mapView addAnnotation:annotation];
+    
+    self.annotation.title = @"我喜欢小芳";
+    self.annotation.subtitle = @"很喜欢";
+    self.annotation.coordinate = coordinate;
+    [self.mapView addAnnotation:self.annotation];
     
 }
 
@@ -58,7 +61,7 @@
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
-    if (![annotation isKindOfClass:[MyAnnotation class]])
+    if (![annotation isKindOfClass:[MKPointAnnotation class]])
         return nil;
     
     static NSString *reuID = @"reuAnnotation";

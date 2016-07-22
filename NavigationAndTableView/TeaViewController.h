@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-#import "MyAnnotation.h"
+
 
 @interface TeaViewController : UIViewController <MKMapViewDelegate,CLLocationManagerDelegate>
 
